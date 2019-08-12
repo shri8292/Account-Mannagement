@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link type="text/css" href="bank_index.css"  rel="stylesheet">
+</head>
+<body>
+
+<h2 >WELCOME TO BANK DETAILS</h2>
+<div id="search">
+<select id="select_state">
+<option>Select city name</option>
+<option>LUCKNOW</option>
+<option>UTTAR PARDESH</option>
+<option>GAPALGANG</option>
+<option>SIWAN</option>
+<option>BANGALORE</option>
+<option>KANPUR</option>
+</select>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search By Bank Names.." title="Type in a name">
+</div>
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:20%;"> Bank Name</th>
+    <th style="width:30%;">Address</th>
+    <th style="width:15%;">Phone Number</th>
+    <th style="width:15%;">City</th>
+    <th style="width:20%;">State</th>
+    
+  </tr>
+ 
+  <tr>
+    <td>UNION BANK OF INDIA</td>
+    <td>NEHRU NAGAR ALIZA APARTMENT 2ND FLOOR</td>
+    <td>8982520373</td>
+    <td>LUCKNOW</td>
+    <td>UTTAR PARDESH</td>
+  </tr>
+  <tr>
+    <td>KOTAK BANK</td>
+    <td>PRATAP NAGAR ROUNAK APARTMENT 1ST FLOOR </td>
+    <td>8292961721</td>
+    <td>KANPUR</td>
+    <td>UTTAR PRADESH</td>
+  </tr>
+  <tr>
+    <td>AXIS BANK </td>
+    <td>CHAPRA ROAD NEAR BUS STAND SIWAN</td>
+    <td>9935468524</td>
+    <td>SIWAN</td>
+    <td>BIHAR</td>
+  </tr>
+  <tr>
+    <td>CENDIKATE BANK</td>
+    <td>RAJENDRA PATH NEAR SIWAN RAILWAY STATION </td>
+    <td>9931585821</td>
+    <td>GOPALGANG</td>
+    <td>BIHAR</td>
+  </tr>
+  <tr>
+    <td>STATE BANK OF INDIA</td>
+    <td>ASHOKA GARDEN NEAR POLICE STATION </td>
+    <td>9952634587</td>
+    <td>BHOPAL</td>
+    <td>MADHYA PRADESH</td>
+  </tr>
+  <tr>
+    <td>CANARA BANK OF INDIA</td>
+    <td>NEELBAD RADIBAD ROAD SEHOR </td>
+    <td>9987586528</td>
+    <td>SEHOR</td>
+    <td>MADHYA PRADESH</td>
+  </tr>
+</table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}s
+</script>
+
+<!-- pagenation code-->
+<div class="pagination">
+  <a href="#">&laquo;</a>
+  <a href="bankindex.html" >1</a>
+  <a href="bank_page2.html" class="active" >2</a>
+  <a href="bank_page3.html">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">6</a>
+  <a href="#">&raquo;</a>
+</div>
+
+</body>
+</html>
