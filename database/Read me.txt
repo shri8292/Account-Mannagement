@@ -1,0 +1,17 @@
+for Back-End
+---------------------------------------------------------------
+Restore Database file :
+Steps :
+1. Create database with name myaccount.
+2. select myaccount database.
+3. Import  myaccount.sql file.
+
+
+for Front-End
+---------------------------------------------------------------
+Default User Name : myuser
+Password : myuser@123
+
+
+Now you can also create your new account
+
